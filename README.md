@@ -3,7 +3,7 @@
 🇫🇷 [Français](#français) · 🇬🇧 [English](#english)
 
 > 🚧 **En construction : lancement le 2 novembre 2026.** Ce dépôt est construit en public, semaine par semaine.
-> 🚧 **Work in progress: launching 2 November 2026.** This repo is built in public, week by week.
+> 🚧 **Work in progress: launching 2 November 2026.** This repo is built in public, week by week. 
 
 📄 **Case study:** [zahra-work.com/salesforce-implementation.html](https://zahra-work.com/salesforce-implementation.html)
 
