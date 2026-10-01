@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VAT_Format</fullName>
+    <active>true</active>
+    <description>Format du n° de TVA intracommunautaire français.</description>
+    <errorConditionFormula>AND(
+        NOT(ISBLANK(VAT_Number__c)),
+        NOT(REGEX(VAT_Number__c, "FR[0-9A-Z]{2}[0-9]{9}"))
+    )</errorConditionFormula>
+    <errorDisplayField>VAT_Number__c</errorDisplayField>
+    <errorMessage>Le n° de TVA doit avoir le format FR + 2 caractères + 9 chiffres (ex. : FR32123456789).</errorMessage>
+</ValidationRule>

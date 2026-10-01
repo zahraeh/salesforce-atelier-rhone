@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Consent_Source_Required</fullName>
+    <active>true</active>
+    <description>RGPD : une date de consentement doit être accompagnée de sa source.</description>
+    <errorConditionFormula>AND(
+        NOT(ISBLANK(Consent_Date__c)),
+        ISBLANK(TEXT(Consent_Source__c))
+    )</errorConditionFormula>
+    <errorDisplayField>Consent_Source__c</errorDisplayField>
+    <errorMessage>Indiquez comment le consentement a été recueilli.</errorMessage>
+</ValidationRule>

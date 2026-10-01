@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VAT_Matches_SIREN</fullName>
+    <active>true</active>
+    <description>Les 9 derniers chiffres du n° de TVA doivent être égaux au SIREN. Voir D-08.</description>
+    <errorConditionFormula>AND(
+        NOT(ISBLANK(VAT_Number__c)),
+        NOT(ISBLANK(SIRET__c)),
+        RIGHT(VAT_Number__c, 9) &lt;&gt; LEFT(SIRET__c, 9)
+    )</errorConditionFormula>
+    <errorDisplayField>VAT_Number__c</errorDisplayField>
+    <errorMessage>Le n° de TVA ne correspond pas au SIREN : ses 9 derniers chiffres doivent être les 9 premiers du SIRET.</errorMessage>
+</ValidationRule>

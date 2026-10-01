@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SIREN__c</fullName>
+    <label>SIREN</label>
+    <description>Identifiant de l'entreprise : les 9 premiers chiffres du SIRET.</description>
+    <type>Text</type>
+    <formula>LEFT(SIRET__c, 9)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <unique>false</unique>
+</CustomField>

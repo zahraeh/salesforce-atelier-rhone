@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SIRET_Enriched_At__c</fullName>
+    <label>Enrichi le</label>
+    <description>Date et heure du dernier enrichissement depuis l'API Recherche d'entreprises.</description>
+    <type>DateTime</type>
+    <required>false</required>
+</CustomField>

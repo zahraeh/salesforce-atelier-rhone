@@ -34,20 +34,31 @@ A Salesforce implementation run like a real client engagement, from discovery to
 | # | Document | Semaine / Week | Statut / Status |
 |---|---|:---:|:---:|
 | 00 | [Plan du projet / Project plan](docs/00-plan.md) | 0 | ✅ |
-| 01 | [Brief client (FR)](docs/01-brief-client.md) | 1 | ⬜ |
-| 02 | [Note de cadrage / Discovery note](docs/02-discovery-note.md) | 1 | ⬜ |
-| 03 | [User stories](docs/03-user-stories.md) | 1 | ⬜ |
-| 04 | [Modèle de données / Data model](docs/04-data-model.md) | 1 | ⬜ |
-| 05 | [Journal des décisions / Decision log](docs/05-decision-log.md) | 1 → 4 | ⬜ |
+| 01 | [Brief client (FR)](docs/01-brief-client.md) | 1 | ✅ |
+| 02 | [Note de cadrage / Discovery note](docs/02-discovery-note.md) | 1 | ✅ |
+| 03 | [User stories](docs/03-user-stories.md) | 1 | ✅ |
+| 04 | [Modèle de données / Data model](docs/04-data-model.md) | 1 | ✅ |
+| 05 | [Journal des décisions / Decision log](docs/05-decision-log.md) | 1 → 4 | 🔄 |
 | 06 | [Mapping de données / Data mapping](docs/06-data-mapping.md) | 3 | ⬜ |
-| 07 | [Cahier de recette / UAT workbook](docs/07-uat-workbook.md) | 2 → 4 | ⬜ |
+| 07 | [Cahier de recette / UAT workbook](docs/07-uat-workbook.md) | 2 → 4 | 🔄 |
 | 08 | [Facturation électronique / E-invoicing design](docs/08-e-invoicing-design.md) | 3 | ⬜ |
 | 09 | [Note de conception IA / AI design note](docs/09-ai-design-note.md) | 4 | ⬜ |
 | 10 | [Plan de déploiement & runbook](docs/10-deployment-plan-runbook.md) | 4 | ⬜ |
 | 11 | [Étude de cas (FR)](docs/11-etude-de-cas-fr.md) | 4 | ⬜ |
 | 12 | [Case study (EN)](docs/12-case-study-en.md) | 4 | ⬜ |
-| — | [Story log](docs/story-log.md) | 1 → 4 | ⬜ |
+| — | [Story log](docs/story-log.md) | 1 → 4 | 🔄 |
 | — | Démo vidéo / Demo video (≤ 5 min) | 4 | ⬜ |
+
+## Ce qui est en place / What's built
+
+| Élément | Détail |
+|---|---|
+| Partage | Comptes, opportunités et requêtes en **privé** ; hiérarchie Direction générale → Directeur commercial → Commercial, et Finance |
+| Comptes | `SIRET__c` (14 chiffres, unique), `SIREN__c` (formule), `VAT_Number__c` (contrôlé contre le SIREN), `NAF_Code__c`, `Legacy_ID__c` (ID externe) |
+| Contacts (RGPD) | Date et source du consentement, date du refus |
+| Paiements | Objet `Payment__c` en maître-détail sur le compte, statuts alignés sur Stripe |
+| Accès | Permission sets `ARE_Sales`, `ARE_Finance`, `ARE_Data_Migration` ; règle de partage Finance en lecture |
+| Tests | `SecurityModelTest` : **10/10** tests prouvant le modèle de sécurité et les règles de qualité des données |
 
 ## Structure
 

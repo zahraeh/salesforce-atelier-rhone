@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <name>Commercial</name>
+    <description>Ne voit que ses propres comptes.</description>
+    <caseAccessLevel>Read</caseAccessLevel>
+    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <parentRole>ARE_Directeur_Commercial</parentRole>
+</Role>

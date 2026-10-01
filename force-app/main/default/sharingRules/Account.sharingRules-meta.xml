@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>Finance_Read_All_Accounts</fullName>
+        <accessLevel>Read</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>La finance lit tous les comptes, sans pouvoir les modifier. Voir D-02.</description>
+        <label>Finance : lecture de tous les comptes</label>
+        <sharedTo>
+            <role>ARE_Finance</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>ARE_Direction_Generale</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

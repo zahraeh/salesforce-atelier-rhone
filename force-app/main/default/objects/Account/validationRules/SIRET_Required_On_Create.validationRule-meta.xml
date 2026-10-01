@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SIRET_Required_On_Create</fullName>
+    <active>true</active>
+    <description>SIRET obligatoire à la création, sauf pour l'utilisateur de migration (permission Bypass_Validation). Voir D-06.</description>
+    <errorConditionFormula>AND(
+        ISNEW(),
+        ISBLANK(SIRET__c),
+        NOT($Permission.Bypass_Validation)
+    )</errorConditionFormula>
+    <errorDisplayField>SIRET__c</errorDisplayField>
+    <errorMessage>Le SIRET est obligatoire pour créer un compte.</errorMessage>
+</ValidationRule>

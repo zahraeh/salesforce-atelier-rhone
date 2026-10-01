@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SIRET_Format</fullName>
+    <active>true</active>
+    <description>Le SIRET doit contenir exactement 14 chiffres. Voir D-07.</description>
+    <errorConditionFormula>AND(
+        NOT(ISBLANK(SIRET__c)),
+        NOT(REGEX(SIRET__c, "[0-9]{14}"))
+    )</errorConditionFormula>
+    <errorDisplayField>SIRET__c</errorDisplayField>
+    <errorMessage>Le SIRET doit contenir exactement 14 chiffres, sans espace ni lettre.</errorMessage>
+</ValidationRule>

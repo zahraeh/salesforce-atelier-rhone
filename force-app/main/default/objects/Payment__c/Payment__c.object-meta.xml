@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Paiement</label>
+    <pluralLabel>Paiements</pluralLabel>
+    <gender>Masculine</gender>
+    <startsWith>Consonant</startsWith>
+    <description>Un paiement attendu ou reçu pour une commande. Le partage suit le compte (maître-détail). Voir D-03.</description>
+    <nameField>
+        <label>N° paiement</label>
+        <type>AutoNumber</type>
+        <displayFormat>PAY-{00000}</displayFormat>
+        <startingNumber>1</startingNumber>
+    </nameField>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <sharingModel>ControlledByParent</sharingModel>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <enableActivities>true</enableActivities>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableBulkApi>true</enableBulkApi>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <enableFeeds>false</enableFeeds>
+</CustomObject>

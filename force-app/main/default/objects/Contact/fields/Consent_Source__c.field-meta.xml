@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Consent_Source__c</fullName>
+    <label>Source du consentement</label>
+    <description>RGPD : comment le consentement a été recueilli.</description>
+    <type>Picklist</type>
+    <required>false</required>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value><fullName>Trade_Show</fullName><default>false</default><label>Salon</label></value>
+            <value><fullName>Website</fullName><default>false</default><label>Site web</label></value>
+            <value><fullName>Paper_Form</fullName><default>false</default><label>Formulaire papier</label></value>
+            <value><fullName>Email</fullName><default>false</default><label>Email</label></value>
+            <value><fullName>Phone</fullName><default>false</default><label>Téléphone</label></value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

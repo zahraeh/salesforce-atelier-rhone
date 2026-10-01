@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Days_To_Payment__c</fullName>
+    <label>Délai de paiement (jours)</label>
+    <description>Jours entre la date de la commande et l'encaissement. Alimente le délai moyen de paiement du tableau de bord.</description>
+    <type>Number</type>
+    <precision>18</precision>
+    <scale>0</scale>
+    <formula>IF(
+    OR(ISBLANK(Paid_Date__c), ISBLANK(Order__r.EffectiveDate)),
+    NULL,
+    Paid_Date__c - Order__r.EffectiveDate
+)</formula>
+    <formulaTreatBlanksAs>BlankAsBlank</formulaTreatBlanksAs>
+    <unique>false</unique>
+</CustomField>

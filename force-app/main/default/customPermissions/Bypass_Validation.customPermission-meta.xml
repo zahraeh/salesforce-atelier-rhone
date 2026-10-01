@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPermission xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Contourner les règles de validation</label>
+    <description>Réservé à l'utilisateur de migration : permet de charger des comptes historiques sans SIRET. Voir D-06.</description>
+    <isLicensed>false</isLicensed>
+</CustomPermission>
