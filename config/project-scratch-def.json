@@ -1,0 +1,11 @@
+{
+  "orgName": "Atelier Rhône Équipements",
+  "edition": "Developer",
+  "language": "fr",
+  "country": "FR",
+  "features": [],
+  "settings": {
+    "lightningExperienceSettings": { "enableS1DesktopEnabled": true },
+    "quoteSettings": { "enableQuote": true }
+  }
+}
